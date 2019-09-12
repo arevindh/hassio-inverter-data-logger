@@ -22,11 +22,18 @@ Refresh the Add-on Store and install `Inverter Data Logger`.
 
 ## Configuration
 
+### Global options
+
+- `log_level`: Level of logging to enable. Defaults to `info`.
+
+### Inverter settings
+
 Provide the serial number of each inverter and the corresponding PVOutput api key and system id in
 the add-on configuration:
 
 ```
 {
+  ...
   "inverters": [
     {
       "serialnumber": "ABCD012342FAKE",
@@ -36,3 +43,6 @@ the add-on configuration:
   ]
 }
 ```
+
+Optionally you can provide for each inverter:
+- `pvout_always_upload`: true/false
