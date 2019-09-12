@@ -7,11 +7,13 @@
   "startup": "before",
   "boot": "auto",
   "options": {
+    "log_level": "info",
     "inverters": [
       { "serialnumber": null, "pvout_apikey": null, "pvout_sysid": null }
     ]
   },
   "schema": {
+    "log_level": "match(critical|error|warning|info|debug)?",
     "inverters": [
       { "serialnumber": "str", "pvout_apikey": "str", "pvout_sysid": "str",
         "pvout_always_upload": "bool?" }
