@@ -15,7 +15,10 @@ RUN pip install --no-cache six pytz
 # Clone Inverter-Data-Logger
 RUN apk add --no-cache git
 WORKDIR /
-RUN git clone https://github.com/XtheOne/Inverter-Data-Logger.git
+RUN git clone https://github.com/XtheOne/Inverter-Data-Logger.git && \
+    cd Inverter-Data-Logger && \
+    git checkout aca616931090ee9de4ae69076c6ec56bc42c4e38 && \
+    rm -rf .git
 RUN apk del git
 
 # TODO: Fix properly upstream
