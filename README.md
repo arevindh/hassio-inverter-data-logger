@@ -36,3 +36,6 @@ the add-on configuration:
   ]
 }
 ```
+
+Optionally you can provide for each inverter:
+- `pvout_always_upload`: true/false

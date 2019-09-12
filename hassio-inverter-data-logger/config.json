@@ -1,6 +1,6 @@
 {
   "name": "Inverter Data Logger",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "slug": "inverter_data_logger",
   "description": "Data logger for inverters from Omnik, Hosola, Goodwe, Solax, Ginlong, Samil, Sofar or Power-One Solar",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -13,7 +13,8 @@
   },
   "schema": {
     "inverters": [
-      { "serialnumber": "str", "pvout_apikey": "str", "pvout_sysid": "str" }
+      { "serialnumber": "str", "pvout_apikey": "str", "pvout_sysid": "str",
+        "pvout_always_upload": "bool?" }
     ]
   },
   "ports": {

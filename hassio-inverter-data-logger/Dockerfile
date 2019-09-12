@@ -15,16 +15,11 @@ RUN pip install --no-cache six pytz
 # Clone Inverter-Data-Logger
 RUN apk add --no-cache git
 WORKDIR /
-RUN git clone https://github.com/XtheOne/Inverter-Data-Logger.git && \
+RUN git clone https://github.com/silvester747/Inverter-Data-Logger.git && \
     cd Inverter-Data-Logger && \
-    git checkout aca616931090ee9de4ae69076c6ec56bc42c4e38 && \
+    git checkout 519f49c86cd5f1474c8fe40ec51a0edc17062cab && \
     rm -rf .git
 RUN apk del git
-
-# TODO: Fix properly upstream
-RUN apk add --no-cache sed
-RUN sed -i  's/(now.minute % 5) == 0/True/' /Inverter-Data-Logger/outputs/PVoutputOutput.py
-RUN apk del sed
 
 # Add scripts
 COPY write_config.py /Inverter-Data-Logger/write_config.py

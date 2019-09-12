@@ -34,3 +34,6 @@ with open(CONFIG_FILE_NAME, "w", encoding="UTF-8") as fp:
     for inverter in options["inverters"]:
         print("apikey-{} = {}".format(inverter["serialnumber"], inverter["pvout_apikey"]), file=fp)
         print("sysid-{} = {}".format(inverter["serialnumber"], inverter["pvout_sysid"]), file=fp)
+        if "pvout_always_upload" in inverter:
+            print("always-upload-{} = {}".format(inverter["serialnumber"],
+                                                 inverter["pvout_always_upload"]), file=fp)
