@@ -3,20 +3,46 @@
   "version": "0.1.2",
   "slug": "inverter_data_logger",
   "description": "Data logger for inverters from Omnik, Hosola, Goodwe, Solax, Ginlong, Samil, Sofar or Power-One Solar",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": [
+    "armhf",
+    "armv7",
+    "aarch64",
+    "amd64",
+    "i386"
+  ],
   "startup": "before",
   "boot": "auto",
   "options": {
     "log_level": "info",
     "inverters": [
-      { "serialnumber": null, "pvout_apikey": null, "pvout_sysid": null, "logger_ip": null, "logger_sn": null }
+      {
+        "serialnumber": null,
+        "pvout_apikey": null,
+        "pvout_sysid": null,
+        "logger_ip": null,
+        "logger_sn": null,
+        "mqtt_server": null,
+        "mqtt_port": null,
+        "mqtt_user": null,
+        "mqtt_password": null,
+      }
     ]
   },
   "schema": {
     "log_level": "match(critical|error|warning|info|debug)?",
     "inverters": [
-      { "serialnumber": "str", "pvout_apikey": "str", "pvout_sysid": "str", "logger_ip": "str", "logger_sn": "str",
-        "pvout_always_upload": "bool?" }
+      {
+        "serialnumber": "str",
+        "pvout_apikey": "str",
+        "pvout_sysid": "str",
+        "logger_ip": "str",
+        "logger_sn": "str",
+        "mqtt_server": "str",
+        "mqtt_port": "str",
+        "mqtt_user": "str",
+        "mqtt_password": "str",
+        "pvout_always_upload": "bool?"
+      }
     ]
   },
   "ports": {

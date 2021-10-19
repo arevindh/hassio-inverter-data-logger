@@ -40,5 +40,12 @@ with open(CONFIG_FILE_NAME, "w", encoding="UTF-8") as fp:
                                                  inverter["pvout_always_upload"]), file=fp)
         print("[logger]", file=fp)
         print("gateways = {},{}".format(inverter["logger_ip"], inverter["logger_sn"]), file=fp)
-        print("port = {},{}".format(inverter["logger_port"]), file=fp)
+        print("port = {}".format(inverter["logger_port"]), file=fp)
         print("timeout = 3", file=fp)
+
+        print("[mqtt]", file=fp)
+        print("host = {}".format(inverter["mqtt_server"]), file=fp)
+        print("port = {}".format(inverter["mqtt_port"]), file=fp)
+        print("user = {}".format(inverter["mqtt_user"]), file=fp)
+        print("password = {}".format(inverter["mqtt_password"]), file=fp)
+        print("topic = {}".format(inverter["serialnumber"]), file=fp)
