@@ -15,9 +15,9 @@ RUN pip install --no-cache six pytz
 # Clone Inverter-Data-Logger
 RUN apk add --no-cache git
 WORKDIR /
-RUN git clone https://github.com/silvester747/Inverter-Data-Logger.git && \
+RUN git clone https://github.com/arevindh/Inverter-Data-Logger.git && \
     cd Inverter-Data-Logger && \
-    git checkout 519f49c86cd5f1474c8fe40ec51a0edc17062cab && \
+    git checkout b5397c8b136b2800d9424edba938adb0634b759c && \
     rm -rf .git
 RUN apk del git
 
