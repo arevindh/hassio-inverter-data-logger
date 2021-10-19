@@ -6,7 +6,7 @@ import sys
 OPTIONS_FILE_NAME = "/data/options.json"
 CONFIG_FILE_NAME = "config.cfg"
 BASE_CONFIG = """[general]
-enabled_plugins = ConsoleOutput,PVoutputOutput
+enabled_plugins = ConsoleOutput,MQTTOutput
 use_temperature = true
 min_temp = 5
 min_voltage = 0
