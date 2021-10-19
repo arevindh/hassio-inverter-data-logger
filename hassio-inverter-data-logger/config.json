@@ -1,10 +1,11 @@
 {
   "name": "Inverter Data Logger",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "requirements": [
     "six",
     "paho-mqtt"
   ],
+  "host_network" : true,
   "slug": "inverter_data_logger",
   "description": "Data logger for inverters from Omnik, Hosola, Goodwe, Solax, Ginlong, Samil, Sofar or Power-One Solar",
   "arch": [
