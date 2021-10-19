@@ -9,13 +9,13 @@
   "options": {
     "log_level": "info",
     "inverters": [
-      { "serialnumber": null, "pvout_apikey": null, "pvout_sysid": null }
+      { "serialnumber": null, "pvout_apikey": null, "pvout_sysid": null, "logger_ip": null, "logger_sn": null }
     ]
   },
   "schema": {
     "log_level": "match(critical|error|warning|info|debug)?",
     "inverters": [
-      { "serialnumber": "str", "pvout_apikey": "str", "pvout_sysid": "str",
+      { "serialnumber": "str", "pvout_apikey": "str", "pvout_sysid": "str", "logger_ip": "str", "logger_sn": "str",
         "pvout_always_upload": "bool?" }
     ]
   },
