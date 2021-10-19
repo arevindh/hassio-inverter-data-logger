@@ -2,6 +2,7 @@
 
 import json
 import sys
+import os
 
 OPTIONS_FILE_NAME = "/data/options.json"
 CONFIG_FILE_NAME = "config.cfg"
@@ -34,10 +35,8 @@ with open(CONFIG_FILE_NAME, "w", encoding="UTF-8") as fp:
     for inverter in options["inverters"]:
         print("apikey-{} = {}".format(inverter["serialnumber"], inverter["pvout_apikey"]), file=fp)
         print("sysid-{} = {}".format(inverter["serialnumber"], inverter["pvout_sysid"]), file=fp)
-        print("sysid-{} = {}".format(inverter["serialnumber"], inverter["pvout_sysid"]), file=fp)
         if "pvout_always_upload" in inverter:
-            print("always-upload-{} = {}".format(inverter["serialnumber"],
-                                                 inverter["pvout_always_upload"]), file=fp)
+            print("always-upload-{} = {}".format(inverter["serialnumber"], inverter["pvout_always_upload"]), file=fp)
         print("[logger]", file=fp)
         print("gateways = {},{}".format(inverter["logger_ip"], inverter["logger_sn"]), file=fp)
         print("port = {}".format(inverter["logger_port"]), file=fp)
