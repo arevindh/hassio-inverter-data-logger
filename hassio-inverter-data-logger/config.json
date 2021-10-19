@@ -24,7 +24,7 @@
         "mqtt_server": null,
         "mqtt_port": null,
         "mqtt_user": null,
-        "mqtt_password": null,
+        "mqtt_password": null
       }
     ]
   },
