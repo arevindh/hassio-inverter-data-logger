@@ -1,6 +1,6 @@
 {
   "name": "Inverter Data Logger",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "requirements": [
     "six",
     "paho-mqtt"
@@ -25,6 +25,7 @@
         "pvout_sysid": null,
         "logger_ip": null,
         "logger_sn": null,
+        "logger_port": "8899",
         "mqtt_server": null,
         "mqtt_port": null,
         "mqtt_user": null,
@@ -41,6 +42,7 @@
         "pvout_sysid": "str",
         "logger_ip": "str",
         "logger_sn": "str",
+        "logger_port": "str",
         "mqtt_server": "str",
         "mqtt_port": "str",
         "mqtt_user": "str",
