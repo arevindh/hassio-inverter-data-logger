@@ -1,6 +1,6 @@
 {
   "name": "Inverter Data Logger",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "slug": "inverter_data_logger",
   "description": "Data logger for inverters from Omnik, Hosola, Goodwe, Solax, Ginlong, Samil, Sofar or Power-One Solar",
   "arch": [
