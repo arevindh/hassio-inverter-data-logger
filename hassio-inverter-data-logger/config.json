@@ -1,11 +1,11 @@
 {
   "name": "Inverter Data Logger",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "requirements": [
     "six",
     "paho-mqtt"
   ],
-  "host_network" : true,
+  "host_network": true,
   "slug": "inverter_data_logger",
   "description": "Data logger for inverters from Omnik, Hosola, Goodwe, Solax, Ginlong, Samil, Sofar or Power-One Solar",
   "arch": [
@@ -21,12 +21,11 @@
     "log_level": "info",
     "inverters": [
       {
-        "serialnumber": null,
-        "pvout_apikey": null,
-        "pvout_sysid": null,
         "logger_ip": null,
         "logger_sn": null,
         "logger_port": "8899",
+        "inverter_brand": null,
+        "inverter_model": null,
         "mqtt_server": null,
         "mqtt_port": null,
         "mqtt_user": null,
@@ -38,24 +37,16 @@
     "log_level": "match(critical|error|warning|info|debug)?",
     "inverters": [
       {
-        "serialnumber": "str",
-        "pvout_apikey": "str",
-        "pvout_sysid": "str",
         "logger_ip": "str",
         "logger_sn": "str",
         "logger_port": "str",
+        "inverter_brand": "str",
+        "inverter_model": "str",
         "mqtt_server": "str",
         "mqtt_port": "str",
         "mqtt_user": "str",
         "mqtt_password": "str",
-        "pvout_always_upload": "bool?"
       }
     ]
-  },
-  "ports": {
-    "10004/tcp": 10004
-  },
-  "ports_description": {
-    "10004/tcp": "End point for inverters to log data."
   }
 }
