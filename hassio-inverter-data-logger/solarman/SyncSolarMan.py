@@ -48,6 +48,11 @@ class SyncSolarMan:
         self.inverter_brand = self.config.get('logger', 'inverter_brand')
         self.inverter_brand = self.config.get('logger', 'inverter_model')
 
+        self.mqtt_server = self.config.get('mqtt', 'host')
+        self.mqtt_port = self.config.get('mqtt', 'port')
+        self.mqtt_user = self.config.get('mqtt', 'user')
+        self.mqtt_password = self.config.get('mqtt', 'password')
+
     def init_sensor(self, sensor_name, state_class, device_class, unit_of_measurement):
 
         payload = {
@@ -71,10 +76,8 @@ class SyncSolarMan:
             payload["state_class"] = state_class
 
         client = mqtt.Client("Solar Inverter")
-        client.username_pw_set(self.config.get('mqtt', 'user'),
-                               self.config.get('mqtt', 'pass'))
-        client.connect(self.config.get('mqtt', 'host'),
-                       int(self.config.get('mqtt', 'port')), 60)
+        client.username_pw_set(self.mqtt_user, self.mqtt_password)
+        client.connect(self.mqtt_server, int(self.mqtt_port), 60)
 
         client.publish(self.ha_base_topic +
                        '/sensor/'+self.sensor_base_topic+'/'+sensor_name+'/config', payload)
