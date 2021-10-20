@@ -45,7 +45,7 @@
         "mqtt_server": "str",
         "mqtt_port": "str",
         "mqtt_user": "str",
-        "mqtt_password": "str",
+        "mqtt_password": "str"
       }
     ]
   }
